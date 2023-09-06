@@ -1,51 +1,45 @@
-package e_s_ll;
+package ex02;
 
 
 public class Person {
     public String name;
     public int age;
-    private int CPF;
-    private int RG;
-    private int CDT;
-    public String type_person;
-
-    public int getCPF() {
-        return CPF;
-    }
-
-    public void setCPF(int CPF) {
-        this.CPF = CPF;
-    }
-
-    public int getRG() {
-        return RG;
-    }
-
-    public void setRG(int RG) {
-        this.RG = RG;
-    }
-
-    public int getCDT() {
-        return CDT;
-    }
-
-    public void setCDT(int CDT) {
-        this.CDT = CDT;
+    public String adress;
+    
+    public Person(String name){
+        this.name = name;
     }
     
-    public void Receive_Payment(String type_person, double wage){
-        if (type_person == "Functionary"){
-            wage = wage + (wage * 0.125);
-        }
-        if (type_person == "Teatcher"){
-            wage = wage + (wage * 0.10);
-        }
-        if (type_person == "Seller"){
-            wage = wage + (wage * 0.075);
-        }
-        System.out.println("| " + type_person + " receive with add R$ " + wage);
+    public Person(int age){
+        this.age = age;
     }
     
+    public Person(String name, int age){
+        this.name = name;
+        this.age = age;
+    }
+    
+    public Person(String name, String adress){
+        this.name = name;
+        this.adress = adress;
+    }
+
+    public Person(int age, String adress){
+        this.age = age;
+        this.adress = adress;
+    }
+    //full constructor
+    public Person(String name, int age, String adress){
+        this.name = name;
+        this.age = age;
+        this.adress = adress;
+    }
+    
+    public void Display_Information(){
+        System.out.println("| Name: " + name);
+        System.out.println("| Age: " + age);
+        System.out.println("| Adress: " + adress);
+    }
     
     
 }
